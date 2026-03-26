@@ -1,4 +1,4 @@
- **Nome:** Framework de Governança de IA para Operações Críticas
+**Framework de Governança de IA para Operações Críticas**
 
 *   **Descrição:** Desenvolvimento de um framework prático e adaptável para governança de soluções de Inteligência Artificial em ambientes de operações críticas (telecom, redes, datacenter). O framework abordaria aspectos como ética, segurança, conformidade regulatória (LGPD, por exemplo), monitoramento de desempenho e mitigação de riscos.
 *   **Objetivo:** Fornecer um guia estruturado para a implementação segura e eficaz de IA em infraestruturas críticas, garantindo conformidade e minimizando riscos operacionais.
