@@ -8,79 +8,134 @@
 
 ```mermaid
 flowchart TD
-    classDef default fill:#d0d0d0,stroke:#ffffff,stroke-width:2px,color:#000000
-    classDef header fill:#b0b0b0,stroke:#ffffff,stroke-width:2px,color:#ffffff
-
-    subgraph Princ ["Princípios Fundamentais"]
+    Start([Implementação de Governança de IA]):::neutral
+    
+    subgraph Princípios ["Princípios Fundamentais"]
     direction TB
-        P1(Transparência)
-        P2(Justiça e Equidade)
-        P3(Responsabilidade)
-        P4(Privacidade)
-        P1 --- P2 --- P3 --- P4
+        Transparência[Transparência]
+        Justica[Justiça e Equidade]
+        Responsabilidade[Responsabilidade]
+        Privacidade[Privacidade]
+        Transparência --> Justica
+        Justica --> Responsabilidade
+        Responsabilidade --> Privacidade
     end
-
-    subgraph ETI ["Pilar 1: Ética"]
+    
+    Decisao{Selecionar Pilar}:::decision
+    
+    subgraph Etica ["Pilar 1: Ética"]
     direction TB
-        E1(Princípios Éticos)
-        E2(Viés e Discriminação)
-        E3(Impacto Social)
-        E4(Valores Humanos)
-        E1 --- E2 --- E3 --- E4
+        PEtica[Ética]
+        PrincEt[Princípios Éticos]
+        Vies[Viés e Discriminação]
+        Impacto[Impacto Social]
+        Valores[Valores Humanos]
+        PEtica --> PrincEt
+        PrincEt --> Vies
+        Vies --> Impacto
+        Impacto --> Valores
     end
-
-    subgraph RIS ["Pilar 2: Riscos"]
+    
+    subgraph Riscos ["Pilar 2: Riscos"]
     direction TB
-        R1(Identificação de Riscos)
-        R2(Avaliação de Impacto)
-        R3(Mitigação)
-        R4(Monitoramento)
-        R1 --- R2 --- R3 --- R4
+        PRiscos[Riscos]
+        Ident[Identificação de Riscos]
+        Avaliacao[Avaliação de Impacto]
+        Mitigacao[Mitigação]
+        Monitor[Monitoramento]
+        PRiscos --> Ident
+        Ident --> Avaliacao
+        Avaliacao --> Mitigacao
+        Mitigacao --> Monitor
     end
-
-    subgraph CON ["Pilar 3: Conformidade"]
+    
+    subgraph Conformidade ["Pilar 3: Conformidade"]
     direction TB
-        C1(Regulamentações)
-        C2(Auditorias)
-        C3(Relatórios)
-        C4(Certificações)
-        C1 --- C2 --- C3 --- C4
+        PConform[Conformidade]
+        Regul[Regulamentações]
+        Aud[Auditorias]
+        Rel[Relatórios]
+        Cert[Certificações]
+        PConform --> Regul
+        Regul --> Aud
+        Aud --> Rel
+        Rel --> Cert
     end
-
-    subgraph INO ["Pilar 4: Inovação"]
+    
+    subgraph Inovacao ["Pilar 4: Inovação"]
     direction TB
-        I1(Desenvolvimento Seguro)
-        I2(Colaboração)
-        I3(Atualizações)
-        I4(Escalabilidade)
-        I1 --- I2 --- I3 --- I4
+        PInov[Inovação]
+        DesSeg[Desenvolvimento Seguro]
+        Colab[Colaboração]
+        Atual[Atualizações]
+        Escala[Escalabilidade]
+        PInov --> DesSeg
+        DesSeg --> Colab
+        Colab --> Atual
+        Atual --> Escala
     end
-
-    subgraph GOV ["Pilar 5: Governança"]
+    
+    subgraph Governanca ["Pilar 5: Governança"]
     direction TB
-        G1(Estruturas Organizacionais)
-        G2(Políticas)
-        G3(Treinamentos)
-        G4(Accountability)
-        G1 --- G2 --- G3 --- G4
+        PGov[Governança]
+        Estrut[Estruturas Organizacionais]
+        Politicas[Políticas]
+        Train[Treinamentos]
+        Account[Accountability]
+        PGov --> Estrut
+        Estrut --> Politicas
+        Politicas --> Train
+        Train --> Account
     end
-
-    subgraph APR ["Aprimoramento Contínuo"]
+    
+    Converge((Aprimoramento Contínuo)):::converge
+    subgraph Aprim ["Elementos de Aprimoramento Contínuo"]
     direction TB
-        A1(Feedback e Aprendizado)
-        A2(Avaliações Periódicas)
-        A3(Melhorias Iterativas)
-        A4(Adaptação)
-        A1 --- A2 --- A3 --- A4
+        Feedback[Feedback e Aprendizado]
+        Aval[Avaliações Periódicas]
+        Melhorias[Melhorias Iterativas]
+        Adapt[Adaptação]
+        Feedback --> Aval
+        Aval --> Melhorias
+        Melhorias --> Adapt
     end
-
-    Princ --> ETI
-    ETI --> RIS
-    RIS --> CON
-    CON --> INO
-    INO --> GOV
-    GOV --> APR
-
-    class P1,P2,P3,P4,E1,E2,E3,E4,R1,R2,R3,R4,C1,C2,C3,C4,I1,I2,I3,I4,G1,G2,G3,G4,A1,A2,A3,A4 default
+    
+    Start --> Princípios
+    Privacidade --> Decisao
+    
+    Decisao -- Ética --> PEtica
+    Decisao -- Riscos --> PRiscos
+    Decisao -- Conformidade --> PConform
+    Decisao -- Inovação --> PInov
+    Decisao -- Governança --> PGov
+    
+    Valores --> Converge
+    Monitor --> Converge
+    Cert --> Converge
+    Escala --> Converge
+    Account --> Converge
+    
+    Converge --> Feedback
+    
+    classDef etica fill:#00f500,stroke:#333,stroke-width:2px,color:#000
+    classDef riscos fill:#f11111,stroke:#fff,stroke-width:2px,color:#fff
+    classDef conform fill:#0066ff,stroke:#fff,stroke-width:2px,color:#fff
+    classDef inov fill:#ffff00,stroke:#333,stroke-width:2px,color:#000
+    classDef gov fill:#b300ff,stroke:#fff,stroke-width:2px,color:#fff
+    classDef neutral fill:#e1e1e1,stroke:#333,stroke-width:2px,color:#000
+    classDef decision fill:#ffcc00,stroke:#333,stroke-width:2px,color:#000
+    classDef converge fill:#cccccc,stroke:#333,stroke-width:2px,color:#000
+    
+    class PEtica,PrincEt,Vies,Impacto,Valores etica
+    class PRiscos,Ident,Avaliacao,Mitigacao,Monitor riscos
+    class PConform,Regul,Aud,Rel,Cert conform
+    class PInov,DesSeg,Colab,Atual,Escala inov
+    class PGov,Estrut,Politicas,Train,Account gov
+    class Start,Decisao,Converge neutral
+    class Decisao decision
+    class Converge,Feedback,Aval,Melhorias,Adapt converge
+    
+    style Princípios fill:#f0f0f0
+    style Aprim fill:#f0f0f0
 
 ```
