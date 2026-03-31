@@ -12,108 +12,114 @@ flowchart TD
     
     subgraph Princípios ["Princípios Fundamentais"]
     direction TB
-        Transparência[Transparência]
-        Justica[Justiça e Equidade]
-        Responsabilidade[Responsabilidade]
-        Privacidade[Privacidade]
+        CentralidadeHumana["Centralidade Humana e Bem-Estar"]
+        Transparência["Transparência e Explicabilidade"]
+        Justica["Justiça e Não Discriminação"]
+        Confiabilidade["Confiabilidade e Robustez"]
+        Segurança["Segurança e Privacidade"]
+        Responsabilidade["Responsabilidade e Prestação de Contas"]
+        Sustentabilidade["Sustentabilidade"]
+        
+        CentralidadeHumana --> Transparência
         Transparência --> Justica
-        Justica --> Responsabilidade
-        Responsabilidade --> Privacidade
+        Justica --> Confiabilidade
+        Confiabilidade --> Segurança
+        Segurança --> Responsabilidade
+        Responsabilidade --> Sustentabilidade
+
     end
     
     Decisao{Pilares do Framework}:::decision
     
-    subgraph Etica ["Pilar 1: Ética"]
+    subgraph Organização ["Pilar 1: Organização da IA"]
     direction TB
-        PEtica[Ética]
-        PrincEt[Princípios Éticos]
-        Vies[Viés e Discriminação]
-        Impacto[Impacto Social]
-        Valores[Valores Humanos]
+        PEtica[Alinhamento e Estratégia]
+        PrincEt["Modelo de Governança"]
+        Vies["Supervisão e Comitês"]
+        Impacto["Papéis e Responsabilidades"]
+        Valores["Políticas de Uso"]
         PEtica --> PrincEt
         PrincEt --> Vies
         Vies --> Impacto
         Impacto --> Valores
     end
     
-    subgraph Riscos ["Pilar 2: Riscos"]
+    subgraph Conformidade ["Pilar 2: Conformidade"]
     direction TB
-        PRiscos[Riscos]
-        Ident[Identificação de Riscos]
-        Avaliacao[Avaliação de Impacto]
-        Mitigacao[Mitigação]
-        Monitor[Monitoramento]
+        PRiscos[Requisitos da LGPD]
+        Ident["Alinhamento Regulatório"]
+        Avaliacao["Classificação de Risco"]
+        Mitigacao[Relatórios Obrigatórios]
+        
         PRiscos --> Ident
         Ident --> Avaliacao
         Avaliacao --> Mitigacao
-        Mitigacao --> Monitor
+        
     end
     
-    subgraph Conformidade ["Pilar 3: Conformidade"]
+    subgraph Ética ["Pilar 3: Ética"]
     direction TB
-        PConform[Conformidade]
-        Regul[Regulamentações]
-        Aud[Auditorias]
-        Rel[Relatórios]
-        Cert[Certificações]
+        PConform[Princípios Éticos Fundamentais]
+        Regul[Transparência e Explicabilidade]
+        Aud[Supervisão Humana]
+        Rel[Mitigação de Viés]
+        
         PConform --> Regul
         Regul --> Aud
         Aud --> Rel
-        Rel --> Cert
+        
     end
     
-    subgraph Inovacao ["Pilar 4: Inovação"]
+    subgraph Inovacao ["Pilar 4: Dados"]
     direction TB
-        PInov[Inovação]
-        DesSeg[Desenvolvimento Seguro]
-        Colab[Colaboração]
-        Atual[Atualizações]
-        Escala[Escalabilidade]
+        PInov[Governança de Dados]
+        DesSeg["Monitoramento do Ciclo de Vida"]
+        Colab[Automação de Drift]
+        Atual[Governança de IA Agêntica]
+        Escala[Guardrails de Segurança]
         PInov --> DesSeg
         DesSeg --> Colab
         Colab --> Atual
         Atual --> Escala
     end
     
-    subgraph Governanca ["Pilar 5: Governança"]
+    subgraph Governanca ["Pilar 5: Segurança da IA"]
     direction TB
-        PGov[Governança]
-        Estrut[Estruturas Organizacionais]
-        Politicas[Políticas]
-        Train[Treinamentos]
-        Account[Accountability]
+        PGov[Resiliência e Robustez]
+        Estrut[Gestão de Incidentes]
+        Politicas[Segurança por Design]
+
         PGov --> Estrut
         Estrut --> Politicas
-        Politicas --> Train
-        Train --> Account
+ 
     end
     
     Converge((Aprimoramento Contínuo)):::converge
-    subgraph Aprim ["Elementos de Aprimoramento Contínuo"]
+    subgraph Aprim ["Aprimoramento Contínuo"]
     direction TB
-        Feedback[Feedback e Aprendizado]
-        Aval[Avaliações Periódicas]
-        Melhorias[Melhorias Iterativas]
-        Adapt[Adaptação]
+        Feedback["Revisão Periódica"]
+        Aval["Feedback Loop"]
+        Melhorias["Benchmarking"]
+        Adapt[Adaptação Tecnológica]
         Feedback --> Aval
         Aval --> Melhorias
         Melhorias --> Adapt
     end
     
     Start --> Princípios
-    Privacidade --> Decisao
+    Sustentabilidade --> Decisao
     
-    Decisao -- Ética --> PEtica
-    Decisao -- Riscos --> PRiscos
-    Decisao -- Conformidade --> PConform
-    Decisao -- Inovação --> PInov
-    Decisao -- Governança --> PGov
+    Decisao -->|Organização| PEtica
+    Decisao -->|Conformidade| PRiscos
+    Decisao -->|Ética| PConform
+    Decisao -->|Dados| PInov
+    Decisao -->|Segurança| PGov
     
     Valores --> Converge
-    Monitor --> Converge
-    Cert --> Converge
+    Mitigacao --> Converge
+    Rel --> Converge
     Escala --> Converge
-    Account --> Converge
+    Politicas --> Converge
     
     Converge --> Feedback
     
@@ -137,5 +143,4 @@ flowchart TD
     
     style Princípios fill:#f0f0f0
     style Aprim fill:#f0f0f0
-
 ```
