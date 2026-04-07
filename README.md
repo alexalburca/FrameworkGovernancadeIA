@@ -26,7 +26,153 @@ Um **Mecanismo de Aprimoramento Contínuo** garante a relevância e eficácia do
 
 ## Entregável Final
 
-O entregável principal é um **documento de framework detalhado (playbook/guia)**, incluindo templates, checklists e um protótipo de dashboard de monitoramento de governança. Este guia serve como uma metodologia abrangente para a implementação de um Framework de Governança de Inteligência Artificial (IA) em ambientes de Operações Críticas.
+O entregável principal é um **documento de framework**, incluindo guia de implementação, checklist e um protótipo de dashboard de monitoramento de governança. Este guia serve como uma metodologia abrangente para a implementação de um Framework de Governança de Inteligência Artificial (IA) em ambientes de Operações Críticas.
+
+## Diagrama do Framework
+
+````mermaid
+flowchart TB
+ subgraph Princípios["Princípios Fundamentais"]
+    direction TB
+        CentralidadeHumana["Centralidade Humana e Bem-Estar"]
+        Transparência["Transparência e Explicabilidade"]
+        Justica["Justiça e Não Discriminação"]
+        Confiabilidade["Confiabilidade e Robustez"]
+        SegurancaPrincipio["Segurança e Privacidade"]
+        Responsabilidade["Responsabilidade e Prestação de Contas"]
+        Sustentabilidade["Sustentabilidade"]
+  end
+ subgraph Organizacao["Pilar 1: Organização da IA"]
+    direction TB
+        Alinhamento["Alinhamento e Estratégia"]
+        ModeloGov["Modelo de Governança"]
+        Supervisao["Supervisão e Comitês"]
+        Papeis["Papéis e Responsabilidades"]
+        PoliticasUso["Políticas de Uso"]
+  end
+ subgraph Conformidade["Pilar 2: Conformidade"]
+    direction TB
+        ReqLGPD["Requisitos da LGPD"]
+        AlinhamentoReg["Alinhamento Regulatório"]
+        ClassRisco["Classificação de Risco"]
+        Relatorios["Relatórios Obrigatórios"]
+  end
+ subgraph Etica["Pilar 3: Ética"]
+    direction TB
+        PrincEticos["Princípios Éticos Fundamentais"]
+        TranspExplicab["Transparência e Explicabilidade"]
+        SupHumana["Supervisão Humana"]
+        MitigVies["Mitigação de Viés"]
+  end
+ subgraph Dados["Pilar 4: Dados"]
+    direction TB
+        GovDados["Governança de Dados"]
+        MonitCiclo["Monitoramento do Ciclo de Vida"]
+        AutoDrift["Automação de Drift"]
+        GovAgentica["Governança de IA Agêntica"]
+        Guardrails["Guardrails de Segurança"]
+  end
+ subgraph Seguranca["Pilar 5: Segurança da IA"]
+    direction TB
+        Resiliencia["Resiliência e Robustez"]
+        GestaoIncid["Gestão de Incidentes"]
+        SegDesign["Segurança por Design"]
+  end
+ subgraph Aprim["Aprimoramento Contínuo"]
+    direction TB
+        Revisao["Revisão Periódica"]
+        FeedLoop["Feedback Loop"]
+        Benchmarking["Benchmarking"]
+        AdaptTec["Adaptação Tecnológica"]
+  end
+    CentralidadeHumana --> Transparência
+    Transparência --> Justica
+    Justica --> Confiabilidade
+    Confiabilidade --> SegurancaPrincipio
+    SegurancaPrincipio --> Responsabilidade
+    Responsabilidade --> Sustentabilidade
+    Alinhamento --> ModeloGov
+    ModeloGov --> Supervisao
+    Supervisao --> Papeis
+    Papeis --> PoliticasUso
+    ReqLGPD --> AlinhamentoReg
+    AlinhamentoReg --> ClassRisco
+    ClassRisco --> Relatorios
+    PrincEticos --> TranspExplicab
+    TranspExplicab --> SupHumana
+    SupHumana --> MitigVies
+    GovDados --> MonitCiclo
+    MonitCiclo --> AutoDrift
+    AutoDrift --> GovAgentica
+    GovAgentica --> Guardrails
+    Resiliencia --> GestaoIncid
+    GestaoIncid --> SegDesign
+    Revisao --> FeedLoop
+    FeedLoop --> Benchmarking
+    Benchmarking --> AdaptTec
+    Start(["Framework de Governança de IA para Operações Críticas"]) --> Princípios
+    Sustentabilidade --> Decisao{"Pilares do Framework"}
+    Decisao -- Organização --> Alinhamento
+    Decisao -- Conformidade --> ReqLGPD
+    Decisao -- Ética --> PrincEticos
+    Decisao -- Dados --> GovDados
+    Decisao -- Segurança --> Resiliencia
+    PoliticasUso --> Converge(("Aprimoramento Contínuo"))
+    Relatorios --> Converge
+    MitigVies --> Converge
+    Guardrails --> Converge
+    SegDesign --> Converge
+    Converge --> Revisao
+    Aprim --> Converge
+
+     Alinhamento:::etica
+     ModeloGov:::etica
+     Supervisao:::etica
+     Papeis:::etica
+     PoliticasUso:::etica
+     ReqLGPD:::riscos
+     AlinhamentoReg:::riscos
+     ClassRisco:::riscos
+     Relatorios:::riscos
+     PrincEticos:::conform
+     TranspExplicab:::conform
+     SupHumana:::conform
+     MitigVies:::conform
+     GovDados:::inov
+     MonitCiclo:::inov
+     AutoDrift:::inov
+     GovAgentica:::inov
+     Guardrails:::inov
+     Resiliencia:::gov
+     GestaoIncid:::gov
+     SegDesign:::gov
+     Revisao:::converge
+     FeedLoop:::converge
+     Benchmarking:::converge
+     AdaptTec:::converge
+     Start:::neutral
+     Start:::neutral
+     Decisao:::decision
+     Decisao:::neutral
+     Decisao:::decision
+     Converge:::converge
+     Converge:::neutral
+     Converge:::converge
+    classDef etica fill:#00f500,stroke:#333,stroke-width:2px,color:#000
+    classDef riscos fill:#f11111,stroke:#fff,stroke-width:2px,color:#fff
+    classDef conform fill:#0066ff,stroke:#fff,stroke-width:2px,color:#fff
+    classDef inov fill:#ffff00,stroke:#333,stroke-width:2px,color:#000
+    classDef gov fill:#b300ff,stroke:#fff,stroke-width:2px,color:#fff
+    classDef neutral fill:#e1e1e1,stroke:#333,stroke-width:2px,color:#000
+    classDef decision fill:#ffcc00,stroke:#333,stroke-width:2px,color:#000
+    classDef converge fill:#cccccc,stroke:#333,stroke-width:2px,color:#000
+    style Princípios fill:#f0f0f0
+    style Aprim fill:#f0f0f0
+
+````
+
+
+
 
 ---
 ## Glossário
