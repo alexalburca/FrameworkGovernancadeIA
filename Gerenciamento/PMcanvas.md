@@ -61,4 +61,4 @@ flowchart TB
     style PM_Canvas fill:none,stroke:none
 ````
 ---
-*Este canvas é um documento vivo e deve ser adaptado e atualizado conforme a evolução do projeto e das necessidades da organização.*
+*Este canvas é um documento vivo e deve ser adaptado e atualizado conforme a evolução do projeto.*
