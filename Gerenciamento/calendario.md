@@ -2,6 +2,8 @@
 
 Este cronograma detalha as 9 sprints para o desenvolvimento e refinamento do Framework de Governança de IA para Operações Críticas, com a data de início em 17 de março de 2026 e a data de entrega final estabelecida para 22 de junho de 2026. O período total de 70 dias úteis foi dividido igualmente entre as sprints.
 
+Ao final de cada sprint será realizada uma breve revisão das entregas produzidas e uma retrospectiva do processo, permitindo ajustes no escopo das sprints seguintes (planejamento em ondas sucessivas).
+
 ````mermaid
 gantt
     title Cronograma de Sprints - Framework de Governança de IA
@@ -34,13 +36,13 @@ O projeto será dividido em 9 sprints, com foco na entrega incremental dos compo
 | :--- | :--- | :--- | :--- |
 | **Sprint 1** | 17/03/2026 - 26/03/2026 (8 dias) | **Definição do Projeto, Canvas** | - Documento de Definição do Projeto e Canvas inicial. |
 | **Sprint 2** | 27/03/2026 - 08/04/2026 (8 dias) | **Plano do Projeto e Cronograma** | - Plano de Projeto detalhado. Cronograma (`calendario.md`) atualizado. |
-| **Sprint 3** | 09/04/2026 - 20/04/2026 (8 dias) | **Elaboração do Framework** | - `Framework de Governança de IA para Operações Críticas.md` finalizado. |
-| **Sprint 4** | 21/04/2026 - 30/04/2026 (8 dias) | **Elaboração do Guia** | - `Guia de Implementação.md` finalizado. |
+| **Sprint 3** | 09/04/2026 - 20/04/2026 (8 dias) | **Elaboração do Framework** | - `Framework de Governança de IA para Operações Críticas.md` finalizado. Revisão do framework com mentor. |
+| **Sprint 4** | 21/04/2026 - 30/04/2026 (8 dias) | **Elaboração do Guia** | - `Guia de Implementação.md` finalizado. Revisão cruzada Framework + Guia para garantir alinhamento conceitual.|
 | **Sprint 5** | 04/05/2026 - 13/05/2026 (8 dias) | **Glossário e Revisão da Documentação** | - `glossário.md` finalizado. Revisão e integração de todos os documentos existentes (`README.md`, `Framework`, `Guia`, `Glossário.md`). |
 | **Sprint 6** | 14/05/2026 - 23/05/2026 (7 dias) | **Checklist** | - `CHECKLIST.md` finalizado. |
 | **Sprint 7** | 26/05/2026 - 04/06/2026 (8 dias) | **Protótipo de Dashboard de Monitoramento de Governança** | - Documento de especificação ou protótipo conceitual do dashboard. |
 | **Sprint 8** | 05/06/2026 - 15/06/2026 (7 dias) | **Material de Apresentação de Pitch** | - Material de apresentação (slides, resumo executivo) para pitch. |
-| **Sprint 9** | 16/06/2026 - 22/06/2026 (8 dias) | **Encerramento do Projeto** | - Relatório final do projeto. Documentação consolidada e revisada para entrega final. |
+| **Sprint 9** | 16/06/2026 - 22/06/2026 (8 dias) | **Encerramento do Projeto** | - Relatório final do projeto. Documentação consolidada e revisada para entrega final, manual de como usar este repositório, Registro formal de lições aprendidas e recomendações para evoluções futuras do framework.|
 
 ## Detalhamento das Sprints
 
